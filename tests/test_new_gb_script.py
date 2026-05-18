@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from new_GB import save_Gitemid
+from new_Gitemid import save_Gitemid
 from steam_market_params.storage import load_json, save_json
 
 
