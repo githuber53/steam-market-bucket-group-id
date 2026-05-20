@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {
   "steamLoginSecure": "...",
   "sessionid": "..."
 }
+=======
+{}
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)

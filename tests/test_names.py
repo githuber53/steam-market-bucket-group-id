@@ -28,7 +28,11 @@ class NameListTests(unittest.TestCase):
                         },
                         {
                             "asset_description": {
+<<<<<<< HEAD
                                 "market_hash_name": "StatTrak™ AK-47 | Frontside Misty (Minimal Wear)",
+=======
+                                "market_bucket_group_name": "StatTrak™ AK-47 | Frontside Misty",
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)
                                 "market_bucket_group_id": "G180720EA033004",
                             }
                         },

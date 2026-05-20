@@ -45,14 +45,23 @@ def build_search_payload(
     ]
 
 
+<<<<<<< HEAD
 def extract_market_hash_name(result: dict[str, Any]) -> str | None:
     for key in ("strHash", "market_hash_name", "hash_name", "name"):
+=======
+def extract_market_bucket_group_name(result: dict[str, Any]) -> str | None:
+    for key in ("market_bucket_group_name"):
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)
         value = result.get(key)
         if isinstance(value, str) and value:
             return value
     asset_description = result.get("asset_description")
     if isinstance(asset_description, dict):
+<<<<<<< HEAD
         value = asset_description.get("market_hash_name")
+=======
+        value = asset_description.get("market_bucket_group_name")
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)
         if isinstance(value, str) and value:
             return value
     return None
@@ -159,7 +168,11 @@ def _entries_from_page(data: dict[str, Any], *, start: int) -> tuple[list[NameEn
     for offset, result in enumerate(results):
         if not isinstance(result, dict):
             continue
+<<<<<<< HEAD
         name = extract_market_hash_name(result)
+=======
+        name = extract_market_bucket_group_name(result)
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)
         if not name:
             continue
         Gitemid = extract_Gitemid(result)

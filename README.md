@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 G18DA243004, G18BD283004, market_bucket_group_id, itemid, Gitemid 
+=======
+G18DA243004, G18BD283004, market_bucket_group_name, market_bucket_group_id, itemid, Gitemid 
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)
 
 
 # Steam Market Params
 
 用于批量获取 Steam 市场参数：
 
+<<<<<<< HEAD
 - `name_list`: Steam 市场物品名称对象列表，包含 `count_id`、`name`、`Gitemid`、`start`、`status`
+=======
+- `name_list`: Steam 市场物品名称对象列表，包含 `count_id`、`name`(market_bucket_group_name)、`Gitemid`(market_bucket_group_id)、`start`、`status`
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)
 - `item_nameid`: listings 页面里的 `Market_LoadOrderSpread(...)` 参数
 - `Gitemid`: Steam 新市场接口返回的 `asset_description.market_bucket_group_id`
 
@@ -100,7 +108,11 @@ data/
 [
   {
     "count_id": 0,
+<<<<<<< HEAD
     "name": "AK-47 | Fuel Injector (Minimal Wear)",
+=======
+    "name": "AK-47 | Fuel Injector",
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)
     "Gitemid": "G1807208C043004",
     "start": 0,
     "status": "ok"
@@ -112,7 +124,11 @@ data/
 
 ```json
 {
+<<<<<<< HEAD
   "AK-47 | Fuel Injector (Minimal Wear)": {
+=======
+  "AK-47 | Fuel Injector": {
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)
     "Gitemid": "G1807208C043004",
     "status": "ok",
     "source": "names",
@@ -129,7 +145,11 @@ data/
 POST https://steamcommunity.com/market/search?appid=730&sort=1&dir=1
 ```
 
+<<<<<<< HEAD
 请求体包含 `appid`、`filters`、`price`、`sort`、`direction`、`start`。返回结果中提取 `strHash` 或 `asset_description.market_hash_name` 作为名称，提取 `asset_description.market_bucket_group_id` 作为 `Gitemid`。
+=======
+请求体包含 `appid`、`filters`、`price`、`sort`、`direction`、`start`。返回结果中提取 `market_bucket_group_name` 作为名称，提取 `asset_description.market_bucket_group_id` 作为 `Gitemid`。
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)
 
 `item_nameid` 仍使用 listings 页面：
 

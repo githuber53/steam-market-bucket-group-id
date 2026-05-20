@@ -27,9 +27,15 @@ GAME = "cs2"
 OPERATION = "Gitemid"
 
 # 测试时建议先用 5 或 10；确认可用后改成 None 抓完整数据。
+<<<<<<< HEAD
 LIMIT: int | None = 99999
 DELAY = 1.0
 PROCESSES = 5
+=======
+LIMIT: int | None = 999999
+DELAY = 0
+PROCESSES = 32
+>>>>>>> a04f59d (Update: Use market_bucket_group_name instead of market_hash_name)
 RETRY_ATTEMPTS = 2
 RETRY_UNTIL_ALL_SUCCESS = False
 DATA_DIR = Path("data")
